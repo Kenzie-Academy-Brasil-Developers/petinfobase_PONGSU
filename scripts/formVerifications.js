@@ -1,6 +1,5 @@
 export const verifyInputs = () => {
-    verification()
-    
+    verification()    
     document.addEventListener('keyup', ()=> {
         verification()
     })

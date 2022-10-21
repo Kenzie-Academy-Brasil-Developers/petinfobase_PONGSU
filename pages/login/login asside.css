@@ -1,27 +1,27 @@
-#login-aside{
+#login-aside {
     display: flex;
     flex-direction: column;
     gap: 13px;
     padding: 15vh 7vw 15vh 0;
 }
 
-#login-aside h2{
+#login-aside h2 {
     font-size: 32px;
     margin-bottom: 13px;
 }
 
-#login-aside h3{
+#login-aside h3 {
     font-size: 32px;
-    margin-bottom: 13px;    
+    margin-bottom: 13px;
     max-width: 370px;
 }
 
-#login-aside h3 span{
+#login-aside h3 span {
     color: var(--brand100);
 
 }
 
-#login-aside p{    
+#login-aside p {
     font-size: 16px;
     color: var(--grey400);
     margin-bottom: 13px;
@@ -29,13 +29,13 @@
 }
 
 
-#login-imgs{
+#login-imgs {
     margin-top: 13px;
     display: flex;
     gap: 18px;
 }
 
-#login-imgs div{
+#login-imgs div {
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -43,8 +43,7 @@
     justify-content: space-between;
 }
 
-#login-imgs div span{
+#login-imgs div span {
     display: flex;
     justify-content: space-between;
 }
-

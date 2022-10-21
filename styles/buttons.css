@@ -1,106 +1,112 @@
- button{  
-  font-family: 'IBM Plex Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
-  display: flex;
-  justify-content: center;
-  align-items: center;  
-  cursor: pointer;
-}
+ button {
+   font-family: 'IBM Plex Sans';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 150%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+ }
 
-.bttn-blue{
-  padding: 7px 16px;
-  background-color: var(--brand100);
-  border: 1px solid var(--brand100);
-  border-radius: 4px;
-  color: var(--grey900);
-}
-.bttn-blue:hover{  
-  background-color: var(--brand200);
-  border: 1px solid var(--brand200);
-}
+ .bttn-blue {
+   padding: 7px 16px;
+   background-color: var(--brand100);
+   border: 1px solid var(--brand100);
+   border-radius: 4px;
+   color: var(--grey900);
+ }
 
-.bttn-grey{
-  padding: 7px 16px;
-  background-color: var(--grey600);
-  border: 1px solid var(--grey600);
-  border-radius: 4px;
-  color: var(--grey400);
-}
-.bttn-grey:hover{  
-  color: black;
-}
+ .bttn-blue:hover {
+   background-color: var(--brand200);
+   border: 1px solid var(--brand200);
+ }
 
-.bttn-red{
-  padding: 7px 16px;
-  background-color: var(--alert100);
-  border: 1px solid var(--alert100);
-  border-radius: 4px;
-  color: var(--grey900);
-}
-.bttn-red:hover{  
-  background-color: var(--alert200);
-  border: 1px solid var(--alert200);
-}
+ .bttn-grey {
+   padding: 7px 16px;
+   background-color: var(--grey600);
+   border: 1px solid var(--grey600);
+   border-radius: 4px;
+   color: var(--grey400);
+ }
 
-.bttn-white{
-  padding: 7px 16px;
-  background-color: var(--white);
-  border: 1px solid var(--grey600);
-  border-radius: 4px;
-  color: black;
-}
-.bttn-white:hover{  
-  background-color: var(--grey700);
-  border: 1px solid var(--grey600);
-}
+ .bttn-grey:hover {
+   color: black;
+ }
 
-.bttn-whiteSmall{
-  padding: 7px 8px;
-  background-color: var(--white);
-  border: 1px solid var(--grey600);
-  border-radius: 4px;
-  color: black;
-}
-.bttn-whiteSmall:hover{  
-  background-color: var(--grey700);
-  border: 1px solid var(--grey600);
-}
+ .bttn-red {
+   padding: 7px 16px;
+   background-color: var(--alert100);
+   border: 1px solid var(--alert100);
+   border-radius: 4px;
+   color: var(--grey900);
+ }
 
-.bttn-greySmall{
-  padding: 7px 8px;
-  background-color: var(--grey600);
-  border: 1px solid var(--grey600);
-  border-radius: 4px;
-  color: var(--grey400);
-}
-.bttn-greySmall:hover{  
-  color: black;
-}
+ .bttn-red:hover {
+   background-color: var(--alert200);
+   border: 1px solid var(--alert200);
+ }
 
-.link{
-  font-family: 'IBM Plex Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
-  color: var(--brand100);  
-}
+ .bttn-white {
+   padding: 7px 16px;
+   background-color: var(--white);
+   border: 1px solid var(--grey600);
+   border-radius: 4px;
+   color: black;
+ }
 
-.link:hover{
-  text-decoration: underline;
-}
+ .bttn-white:hover {
+   background-color: var(--grey700);
+   border: 1px solid var(--grey600);
+ }
 
-.disable{
-  background-color: var(--brandOFF);
-  color: var(--brand200);
-  cursor: not-allowed;
-}
+ .bttn-whiteSmall {
+   padding: 7px 8px;
+   background-color: var(--white);
+   border: 1px solid var(--grey600);
+   border-radius: 4px;
+   color: black;
+ }
 
-.disable:hover{
-  background-color: var(--brandOFF);
-  color: var(--brand200);
-  cursor: not-allowed;
-}
+ .bttn-whiteSmall:hover {
+   background-color: var(--grey700);
+   border: 1px solid var(--grey600);
+ }
+
+ .bttn-greySmall {
+   padding: 7px 8px;
+   background-color: var(--grey600);
+   border: 1px solid var(--grey600);
+   border-radius: 4px;
+   color: var(--grey400);
+ }
+
+ .bttn-greySmall:hover {
+   color: black;
+ }
+
+ .link {
+   font-family: 'IBM Plex Sans';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 150%;
+   color: var(--brand100);
+ }
+
+ .link:hover {
+   text-decoration: underline;
+ }
+
+ .disable {
+   background-color: var(--brandOFF);
+   color: var(--brand200);
+   cursor: not-allowed;
+ }
+
+ .disable:hover {
+   background-color: var(--brandOFF);
+   color: var(--brand200);
+   cursor: not-allowed;
+ }

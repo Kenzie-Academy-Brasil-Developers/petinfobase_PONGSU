@@ -1,14 +1,12 @@
 import { getLocalStorage } from "../../scripts/localStorage.js";
 import { getPosts, createPost, getUserData, editPostRequest, deletePostRequest } from "../../scripts/api.js";
 
-
 const verifyLogin = () => {
     const user = getLocalStorage();
     if (user == "") {
         window.location.replace("../login/index.html");
     }
 };
-
 verifyLogin();
 
 
@@ -23,8 +21,8 @@ const renderUserData = async () => {
 
     renderPosts()
 };
-
 renderUserData()
+
 
 const logout = () => {
     const logoutBttn = document.getElementById('user-logout')
@@ -35,6 +33,7 @@ const logout = () => {
     })
 }
 logout()
+
 
 const renderPosts = async () => {
     const user = getLocalStorage();
@@ -74,11 +73,11 @@ const renderPosts = async () => {
             postBttns.remove()
         }
     })
-
     openPost()
     deletePost()
     editPost()
 }
+
 
 const renderCreatePost = () => {
     const createPostBttn = document.getElementById('create-post-bttn')
@@ -107,6 +106,7 @@ const renderCreatePost = () => {
 }
 renderCreatePost()
 
+
 const openPost = async () => {
     const openPostLinks = [...document.getElementsByClassName('open-post-link')]
     const openPostModal = document.getElementById('open-post-modal')
@@ -129,7 +129,7 @@ const openPost = async () => {
             openPostDate.innerText = tratarData(postOpened.createdAt)
             openPostTitle.innerText = postOpened.title
             openPostText.innerText = postOpened.content
-            closePostModal.addEventListener('click', ()=>{
+            closePostModal.addEventListener('click', () => {
                 openPostModal.classList.add('hide')
             })
         })
@@ -140,7 +140,7 @@ const tratarData = (data) => {
     let dataNova = new Date(data)
     let ano = dataNova.getFullYear()
     let mes = dataNova.getMonth()
-    let messesNome = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro']
+    let messesNome = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
     let dataTratada = messesNome[mes] + ' de ' + ano
     return dataTratada
 }
@@ -152,19 +152,18 @@ const deletePost = () => {
     const closeDeleteModalBttns = [...document.getElementsByClassName('delete-modal-close')]
 
     deletePostOpenBttns.map((bttn) => {
-        bttn.addEventListener('click', async ()=>{
+        bttn.addEventListener('click', async () => {
             deletePostModal.classList.remove('hide')
             finalDeleteBttn.id = 'delete-' + bttn.id.slice(7)
-            finalDeleteBttn.addEventListener('click', async ()=>{
+            finalDeleteBttn.addEventListener('click', async () => {
                 deletePostRequest(finalDeleteBttn.id.slice(7))
                 deletePostModal.classList.add('hide')
                 await renderPosts()
             })
         })
     })
-
     closeDeleteModalBttns.map((closeBttn) => {
-        closeBttn.addEventListener('click', async()=>{
+        closeBttn.addEventListener('click', async () => {
             deletePostModal.classList.add('hide')
             await renderPosts()
         })
@@ -180,7 +179,7 @@ const editPost = () => {
     let openPostText = document.querySelector('#post-editing-content')
 
     editPostOpenBttns.map((bttn) => {
-        bttn.addEventListener('click', async ()=>{
+        bttn.addEventListener('click', async () => {
             editPostModal.classList.remove('hide')
             finalEditBttn.id = 'save-edit-' + bttn.id.slice(7)
             let postID = bttn.id.slice(5)
@@ -188,7 +187,7 @@ const editPost = () => {
             let postOpened = posts.find((post) => post.id == postID)
             openPostTitle.value = postOpened.title
             openPostText.value = postOpened.content
-            finalEditBttn.addEventListener('click', async ()=>{
+            finalEditBttn.addEventListener('click', async () => {
                 const post1 = {
                     title: openPostTitle.value,
                     content: openPostText.value,
@@ -199,9 +198,8 @@ const editPost = () => {
             })
         })
     })
-
     closeEditModalBttns.map((closeBttn) => {
-        closeBttn.addEventListener('click', async()=>{
+        closeBttn.addEventListener('click', async () => {
             editPostModal.classList.add('hide')
             await renderPosts()
         })

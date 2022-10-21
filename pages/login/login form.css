@@ -1,4 +1,4 @@
-#login-form{
+#login-form {
     padding: 30px 25px;
     border: 1px solid var(--grey600);
     border-radius: 4px;
@@ -7,36 +7,36 @@
     gap: 27px;
 }
 
-#login-top{
+#login-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#login-form h4{   
+#login-form h4 {
     font-size: 20px;
     font-weight: 500;
 }
 
-#login-top button{   
+#login-top button {
     height: 29px;
 }
 
 
-input{
-    margin-top: 13px;    
+input {
+    margin-top: 13px;
 }
 
-.subt-desc{    
-font-size: 14px;
-font-weight: 400;
-color: var(--grey400);
-max-width: 321px;
-text-align: center;
-padding: 0 2px;
+.subt-desc {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--grey400);
+    max-width: 321px;
+    text-align: center;
+    padding: 0 2px;
 }
 
-.subt{
+.subt {
     text-align: center;
     font-size: 14px;
     color: var(--grey100);

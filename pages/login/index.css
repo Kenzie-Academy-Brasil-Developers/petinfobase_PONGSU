@@ -1,15 +1,15 @@
-main{
+main {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-#spiner{
+#spiner {
     animation: loads 20000ms;
 }
 
-.error-alert{
+.error-alert {
     margin-top: -20px;
     margin-bottom: -18px;
     padding-left: 7px;
@@ -19,10 +19,11 @@ main{
 }
 
 @keyframes loads {
-	0% {
-		transform: rotate(0);
-	}
-	100% {
-		transform: rotate(5360deg);
-	}
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(5360deg);
+    }
 }

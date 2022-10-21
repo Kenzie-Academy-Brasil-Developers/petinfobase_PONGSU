@@ -1,14 +1,21 @@
 import { toltip } from "./toltip.js";
-
 const baseUrl = 'http://localhost:3333/'
 
+// Lista de funções:
+// login             ==> linha 13
+// getUserData       ==> linha 51
+// register          ==> linha 70 
+// getPosts          ==> linha 105
+// createPost        ==> linha 122
+// deletePostRequest ==> linha 142
+// editPostRequest   ==> linha 162          (export ==> linha 182)
+ 
 async function login(body) {
   const bttn = document.querySelector('.bttn-blue')
   const errorAlert = document.querySelector('.error-alert')
   if (errorAlert != null) {
     errorAlert.remove()
   }
-
 
   try {
     const request = await fetch(baseUrl + "login", {
@@ -28,14 +35,12 @@ async function login(body) {
         window.location.replace("../home/index.html");
       }, 4000);
     } else {
-      // window.location.replace("../login/index.html");
       bttn.innerHTML = 'Acessar'
       bttn.insertAdjacentHTML('afterend', `
       <p class='error-alert'>Usuário e/ou senha invalido(s)</p>
       `)
     }
   } catch (err) {
-    // window.location.replace("../login/index.html");
     bttn.innerHTML = 'Acessar'
     bttn.insertAdjacentHTML('afterend', `
     <p class='error-alert'>ERRO AO FAZER LOGIN</p>
@@ -46,7 +51,7 @@ async function login(body) {
 async function getUserData() {
   const user = JSON.parse(localStorage.getItem("user"))
   let userInfo = {}
-  try{
+  try {
     const request = await fetch(baseUrl + "users/profile", {
       method: "GET",
       headers: {
@@ -59,7 +64,7 @@ async function getUserData() {
     return userInfo = response2
   } catch (err) {
     console.log(err);
-  }  
+  }
 }
 
 async function register(body) {
@@ -134,7 +139,6 @@ async function createPost(body) {
   }
 }
 
-
 async function deletePostRequest(id) {
   const user = JSON.parse(localStorage.getItem("user"))
   try {
@@ -175,6 +179,12 @@ async function editPostRequest(body, id) {
   }
 }
 
-
-
-export { login, register, getPosts, createPost, deletePostRequest, editPostRequest, getUserData };
+export { 
+  login, 
+  getUserData, 
+  register, 
+  getPosts, 
+  createPost, 
+  deletePostRequest, 
+  editPostRequest
+ };

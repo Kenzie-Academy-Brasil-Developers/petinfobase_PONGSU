@@ -1,4 +1,4 @@
-label{
+label {
   font-family: 'IBM Plex Sans';
   font-style: normal;
   font-weight: 500;
@@ -6,7 +6,7 @@ label{
   line-height: 150%;
 }
 
-input{
+input {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -19,19 +19,19 @@ input{
   border-radius: 4px;
 }
 
-input:active{  
+input:active {
   border: 1px solid var(--grey100);
   color: var(--grey100);
   background-color: var(--white);
 }
 
-.input-error{
+.input-error {
   border: 1px solid var(--alert100);
   color: var(--grey100);
   background-color: var(--white);
 }
 
-.input-msg-error{
+.input-msg-error {
   font-family: 'IBM Plex Sans';
   font-style: normal;
   font-weight: 400;
