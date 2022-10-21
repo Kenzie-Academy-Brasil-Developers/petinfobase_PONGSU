@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petinfo - Login</title>
+    <title>Petinfo - login</title>
+    <link rel="stylesheet" href="../../styles/globalStyles.css">
+    <link rel="stylesheet" href="../../styles/buttons.css">
+    <link rel="stylesheet" href="../../styles/inputs.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./login form.css">
+    <link rel="stylesheet" href="./login asside.css">
 </head>
+
 <body>
-    <main></main>
-    <script type="module" src="index.js"></script>
+    <main>
+        <aside id="login-aside">
+            <h2>Petinfo</h2>
+            <h3><span>Amor</span> e <span>carinho</span> por meio do conhecimento</h3>
+            <p>Todas as informações para melhorar a vida do seu pet em um só lugar</p>
+            <div id="login-imgs">
+                <div>
+                    <span>
+                        <img src="../../src/Rectangle 2q1.svg" alt="">
+                        <img src="../../src/Rectangle 3q2.svg" alt="">
+                    </span>
+                    <img src="../../src/Rectangle 4h.svg" alt="">
+                </div>
+                <aside>
+                    <img src="../../src/Rectangle 5v.svg" alt="">
+                </aside>
+            </div>
+        </aside>
+        <form id="login-form">
+                <h4>Login</h4>
+            <div class="login-email">
+                <label class="login-label" for="">Email</label>
+                <input id='email' placeholder="Digite seu email aqui" type="email">
+            </div>
+            <div class="login-password">
+                <label class="login-label" for="">Senha</label>
+                <input id="password" placeholder="Digite sua senha aqui" type="password">
+            </div>
+            <button class="bttn-blue">Acessar</button>
+            <p class="subt">Ainda não possui conta?</p>
+            <p class="subt-desc">Clicando no botão abaixo, você pode se cadastrar rapidamente</p>
+            <button id="go-to-register" type="button" class="bttn-white">Cadastrar</button>
+
+        </form>
+    </main>
+    <script type="module" src="./index.js"></script>
 </body>
+
 </html>

@@ -9,15 +9,6 @@ main{
     animation: loads 20000ms;
 }
 
-.error-alert{
-    margin-top: -20px;
-    margin-bottom: -18px;
-    padding-left: 7px;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--alert100);
-}
-
 @keyframes loads {
 	0% {
 		transform: rotate(0);
@@ -25,4 +16,14 @@ main{
 	100% {
 		transform: rotate(5360deg);
 	}
+}
+
+
+.error-alert{
+    margin-top: -20px;
+    margin-bottom: -18px;
+    padding-left: 7px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--alert100);
 }

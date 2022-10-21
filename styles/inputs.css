@@ -1,0 +1,41 @@
+label{
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+input{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 16px;
+  width: 321px;
+  height: 44px;
+  color: var(--grey100);
+  border: 1px solid var(--grey600);
+  background-color: var(--grey800);
+  border-radius: 4px;
+}
+
+input:active{  
+  border: 1px solid var(--grey100);
+  color: var(--grey100);
+  background-color: var(--white);
+}
+
+.input-error{
+  border: 1px solid var(--alert100);
+  color: var(--grey100);
+  background-color: var(--white);
+}
+
+.input-msg-error{
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--alert100);
+}

@@ -1,0 +1,23 @@
+#register-form{
+    padding: 45px 25px;
+    border: 1px solid var(--grey600);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+
+#register-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#register-top h4{   
+    font-size: 20px;
+    font-weight: 500;
+}
+
+input{
+    margin-top: 13px;    
+}

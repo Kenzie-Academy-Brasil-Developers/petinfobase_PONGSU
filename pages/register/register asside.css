@@ -1,0 +1,43 @@
+#register-aside{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    padding: 15vh 0 15vh 7vw;
+}
+
+#register-aside h2{
+    font-size: 32px;
+    margin-bottom: 13px;
+}
+
+#register-aside h3{
+    font-size: 32px;
+    color: var(--brand100);
+    margin-bottom: 13px;
+}
+
+#register-aside p{    
+    font-size: 16px;
+    color: var(--grey400);
+    margin-bottom: 13px;
+    max-width: 320px;
+}
+
+
+#register-imgs{
+    margin-top: 13px;
+    display: flex;
+    gap: 18px;
+}
+
+#register-imgs div{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#register-imgs div span{
+    display: flex;
+    justify-content: space-between;
+}
+

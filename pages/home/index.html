@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petinfo - Home</title>
+    <link rel="stylesheet" href="../../styles/globalStyles.css">
+    <link rel="stylesheet" href="../../styles/buttons.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./posts.css">
+    <link rel="stylesheet" href="./home header.css">
+    <link rel="stylesheet" href="../../styles/modals.css">
+    <link rel="stylesheet" href="../../styles/toltip.css">
+    <script defer type="module" src="./index.js"></script>
+</head>
+
+<body>
+    <header class="container">
+        <h1>Petinfo</h1>
+        <nav>
+            <button id="create-post-bttn" class="bttn-blue">Criar Publicação</button>
+            <div id=img-header-box>
+                <img id="user-img" src="../../src/Rectangle 3q2.svg" alt="">
+                <div class="hide" id="user-options">
+                    <p id="user-name">@samuelleoats</p>
+                    <span id="user-logout">
+                        <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.5898 6.21484C13.8359 5.96875 13.8359 5.55859 13.5898 5.28516L8.99609 0.691406C8.55859 0.28125 7.875 0.582031 7.875 1.15625V3.78125H4.15625C3.77344 3.78125 3.5 4.08203 3.5 4.4375V7.0625C3.5 7.44531 3.77344 7.71875 4.15625 7.71875H7.875V10.3438C7.875 10.9453 8.58594 11.2188 8.99609 10.8086L13.5898 6.21484ZM5.25 10.6719V9.57812C5.25 9.41406 5.08594 9.25 4.92188 9.25H2.625C2.13281 9.25 1.75 8.86719 1.75 8.375V3.125C1.75 2.66016 2.13281 2.25 2.625 2.25H4.92188C5.08594 2.25 5.25 2.11328 5.25 1.92188V0.828125C5.25 0.664062 5.08594 0.5 4.92188 0.5H2.625C1.17578 0.5 0 1.67578 0 3.125V8.375C0 9.82422 1.17578 11 2.625 11H4.92188C5.08594 11 5.25 10.8633 5.25 10.6719Z"
+                                fill="#868E96" />
+                        </svg>
+                        <p>Sair da conta</p>
+                    </span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id='feed-title' class="container">
+        <h2>Feed</h2>
+    </div>
+    <main id='posts-list' class="container">        
+    </main>
+    <section class="modal hide" id="open-post-modal">
+        <div class="open-modal open-post">
+            <span class="open-post-header">
+                <div class="open-post-author-infos">
+                    <img class='open-post-author-img' src="../../src/Rectangle 3q2.svg" alt="">
+                    <p class="open-post-author-name">Samuel Leão</p>
+                    <p class="open-post-header-separator">|</p>
+                    <p class="open-post-date">Outubro de 2022</p>                    
+                </div>
+                <button id='open-post-close' class="bttn-grey">X</button>
+            </span>
+            <h3 class="open-post-title">Outubro Rosa: Detalhes sobre a importância da prevenção do câncer de mama em cadelas
+                e gatas</h3>
+            <p class="open-post-text">Assim como em humanos, cadelas e gatas também podem desenvolver câncer de mama. Ainda hoje, para ambas as espécies, o câncer de mama tem maior incidência. Mesmo com a evolução da medicina veterinária e da oncologia, o câncer de mama muitas vezes não tem cura, sendo o tratamento paliativo uma alternativa para dar conforto às fêmeas. Por isso, a conscientização sobre o tema é uma das ações de prevenção de maior importância, principalmente para a campanha do outubro rosa. Então como podemos ajudar a prevenir o câncer de mama em cadelas e gatas? Assim como outros tipos de câncer, o câncer de mama pode ter inúmeras causas. Entre as mais comuns, temos fatores genéticos, como predisposição de algumas raças, exposição à poluição, tabagismo passivo, obesidade, além do fato de os pets estarem vivendo mais, o que também pode causar maior chances de tumores. No caso do câncer de mama, a influência hormonal é um dos fatores de maior contribuição para o aparecimento dessa doença.</p>
+        </div>
+    </section>
+    <section class="modal hide" id="post-edit-modal">
+        <div class="open-modal post-edit-modal">
+            <div class="post-edit-header">
+                <h4>Editar post</h4>
+                <button class="close-edit-modal bttn-grey">X</button>
+            </div>
+            <label for="">Titulo do post</label>
+            <input id="post-editing-title" type="text" placeholder="Digite o título aqui...">
+            <label for="">Conteúdo do post</label>
+            <textarea name="" id="post-editing-content" cols="30" rows="10" placeholder="Desenvolva o conteúdo do post aqui..."></textarea>
+            <div class="post-edit-footer-bttns">
+                <button class="close-edit-modal bttn-grey">Cancelar</button>
+                <button id='bttn-save-post-' class="bttn-blue">Salvar Alterações</button>
+            </div>
+        </div>
+    </section>
+    <section class="modal hide" id="create-post-modal">
+        <div class="open-modal create-post-modal">
+            <div class="create-post-header">
+                <h4>Criando novo post</h4>
+                <button id='create-post-bttn-close' class="bttn-grey">X</button>
+            </div>
+            <label for="">Titulo do post</label>
+            <input id='new-post-title' type="text" placeholder="Digite o título aqui...">
+            <label for="">Conteúdo do post</label>
+            <textarea name="" id="new-post-text" cols="30" rows="10" placeholder="Desenvolva o conteúdo do post aqui..."></textarea>
+            <div class="create-post-footer-bttns">
+                <button id='create-post-bttn-close2' class="bttn-grey">Cancelar</button>
+                <button id='create-post-bttn-create' class="bttn-blue">Publicar</button>
+            </div>
+        </div>
+    </section>
+    <section class="modal hide" id="delete-post-modal">
+        <div class="open-modal delete-post-modal">
+            <div class="delete-post-header">
+                <h4>Confirmação de exclusão</h4>
+                <button class="delete-modal-close bttn-grey">X</button>
+            </div>
+            <h3>Tem certeza que deseja excluir este post?</h3>
+            <p>Essa ação não poderá ser desfeita, então pedimos que tenha cautela antes de concluir</p>
+            <div class="delete-post-footer-bttns">
+                <button class="delete-modal-close bttn-grey">Cancelar</button>
+                <button class="bttn-red" id="excluir-*">Sim, excluir este post</button>
+            </div>
+        </div>
+    </section>
+    <!-- <div id="delete-toltip">
+        <span class="toltip-header">
+            <img src="../../src/check.png" alt="">
+            <h5>Post deletado com sucesso!</h5>
+        </span>
+        <p>O post selecionado para exlusão foi deletado, a partir de agora não aparecerá no seu feed</p>
+    </div> -->
+</body>
+
+</html>

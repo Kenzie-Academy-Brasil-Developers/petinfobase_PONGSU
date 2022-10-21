@@ -1,0 +1,88 @@
+header{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;    
+}
+
+header nav{
+    display: flex;
+    align-items:center;
+    flex-direction: row;
+    gap: 13px;
+}
+
+
+header nav button{
+    height: 33px;
+}
+
+header nav img{
+    height: 41px;
+    width: 41px;
+    border-radius: 50%;
+    outline: 1.5px solid var(--brand100);
+}
+
+#feed-title{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: var(--grey800);
+    margin-bottom: 25px;
+}
+
+header nav img:hover{
+}
+
+#user-options{
+    position: absolute;
+    top: 93px;
+    right: 120px;
+    display: none;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: 4px 4px 0 0;
+    border: 1px solid var(--grey600);
+}
+
+
+#user-options p{
+    display: flex;
+    align-items: center;
+    height: 42px;
+    width: 215px;
+    padding-left: 13px;
+}
+
+#user-logout{
+    display: flex;
+    align-items: center;
+    height: 52px;
+    width: 215px;
+    padding-left: 13px;
+}
+#user-logout{
+    color: var(--grey500);
+    cursor: pointer;
+}
+
+#user-logout:hover {
+    background-color: var(--grey800);
+}
+#user-logout:hover svg path{
+    fill: var(--grey100);
+}
+#user-logout:hover p{
+    color:  var(--grey100);
+}
+
+
+#img-header-box:hover #user-options{
+    display: flex;
+}
+
+#img-header-box:hover img{
+    outline: 2px solid var(--brand100);
+}

@@ -1,0 +1,36 @@
+#delete-toltip, #create-acc-toltip{
+  width: 440px;
+  height: 125px;
+  box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.39);
+  border-radius: 4px;
+  position: fixed;
+  background-color: var(--grey900);
+  animation: toltip 5000ms ease-in forwards;
+}
+
+.toltip-header{
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 23px 23px 7px 33px;
+}
+
+.toltip-header h5{
+  font-weight: 500;
+  font-size: 16px;
+  color: #087F5B;
+}
+
+#delete-toltip p, #create-acc-toltip p{
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--grey200);
+  padding: 0 23px 0 33px;
+}
+
+@keyframes toltip {
+    0%   {right: 30px; bottom:-150px}
+    15%  {right: 30px; bottom:10px}
+    85%  {right: 30px; bottom:10px}
+    100% {right: 30px; bottom:-150px}
+}
