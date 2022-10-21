@@ -9,6 +9,7 @@ const loginCall = () => {
 	loginForm.addEventListener("submit", async (e) => {
 		e.preventDefault()
 		loginBttn.innerHTML = '<img id="spiner" src="../../src/spinnerspiner.svg" alt="">'
+		loginBttn.style.height = '40px'
 		const body = {}
 
 		loginFormElements.forEach((elem) => {

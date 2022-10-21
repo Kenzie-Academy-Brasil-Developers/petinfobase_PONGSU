@@ -9,6 +9,7 @@ function userRegister() {
 	registerForm.addEventListener("submit", async (e) => {
 		e.preventDefault()
 		registerBttn.innerHTML = '<img id="spiner" src="../../src/spinnerspiner.svg" alt="">'
+		registerBttn.style.height = '40px'
 		const body = {}
 
 		registerFormElements.forEach((elem) => {
