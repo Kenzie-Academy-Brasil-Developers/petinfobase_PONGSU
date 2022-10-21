@@ -18,7 +18,6 @@ const loginCall = () => {
 		})
 		await login(body)
 	})
-
 }
 loginCall()
 
