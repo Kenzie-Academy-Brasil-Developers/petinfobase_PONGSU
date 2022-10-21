@@ -33,7 +33,7 @@ async function login(body) {
 
       setTimeout(() => {
         window.location.replace("../home/index.html");
-      }, 4000);
+      }, 1300);
     } else {
       bttn.innerHTML = 'Acessar'
       bttn.insertAdjacentHTML('afterend', `
@@ -43,7 +43,7 @@ async function login(body) {
   } catch (err) {
     bttn.innerHTML = 'Acessar'
     bttn.insertAdjacentHTML('afterend', `
-    <p class='error-alert'>ERRO AO FAZER LOGIN</p>
+    <p class='error-alert'>OPS! Algo deu errado... Tente novamente mais tarde, se o problema persistir entre em contato com os administradores.</p>
     `)
   }
 }
@@ -87,7 +87,7 @@ async function register(body) {
       toltip(1)
       setTimeout(() => {
         window.location.replace("../login/index.html");
-      }, 4000);
+      }, 3000);
     } else {
       bttn.innerHTML = 'Acessar'
       bttn.insertAdjacentHTML('afterend', `
@@ -97,7 +97,7 @@ async function register(body) {
   } catch (err) {
     bttn.innerHTML = 'Acessar'
     bttn.insertAdjacentHTML('afterend', `
-    <p class='error-alert'>OPS! Algo deu errado</p>
+    <p class='error-alert'>OPS! Algo deu errado... Tente novamente mais tarde, se o problema persistir entre em contato com os administradores.</p>
     `)
   }
 }

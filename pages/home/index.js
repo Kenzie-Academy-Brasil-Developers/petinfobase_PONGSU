@@ -1,6 +1,17 @@
 import { getLocalStorage } from "../../scripts/localStorage.js";
 import { getPosts, createPost, getUserData, editPostRequest, deletePostRequest } from "../../scripts/api.js";
 
+// Lista de funções:
+// verifyLogin       ==> linha 15
+// renderUserData    ==> linha 23
+// logout            ==> linha 36
+// renderPosts       ==> linha 46
+// renderCreatePost  ==> linha 89
+// openPost          ==> linha 116
+// tratarData        ==> linha 145 
+// deletePost        ==> linha 154 
+// editPost          ==> linha 179 
+
 const verifyLogin = () => {
     const user = getLocalStorage();
     if (user == "") {
@@ -8,7 +19,6 @@ const verifyLogin = () => {
     }
 };
 verifyLogin();
-
 
 const renderUserData = async () => {
     const user = getLocalStorage();
@@ -23,7 +33,6 @@ const renderUserData = async () => {
 };
 renderUserData()
 
-
 const logout = () => {
     const logoutBttn = document.getElementById('user-logout')
     logoutBttn.addEventListener('click', () => {
@@ -33,7 +42,6 @@ const logout = () => {
     })
 }
 logout()
-
 
 const renderPosts = async () => {
     const user = getLocalStorage();
@@ -78,7 +86,6 @@ const renderPosts = async () => {
     editPost()
 }
 
-
 const renderCreatePost = () => {
     const createPostBttn = document.getElementById('create-post-bttn')
     const createPostModal = document.getElementById('create-post-modal')
@@ -105,7 +112,6 @@ const renderCreatePost = () => {
     });
 }
 renderCreatePost()
-
 
 const openPost = async () => {
     const openPostLinks = [...document.getElementsByClassName('open-post-link')]
@@ -158,7 +164,7 @@ const deletePost = () => {
             finalDeleteBttn.addEventListener('click', async () => {
                 deletePostRequest(finalDeleteBttn.id.slice(7))
                 deletePostModal.classList.add('hide')
-                await renderPosts()
+                return await renderPosts()
             })
         })
     })
@@ -205,4 +211,3 @@ const editPost = () => {
         })
     })
 }
-
