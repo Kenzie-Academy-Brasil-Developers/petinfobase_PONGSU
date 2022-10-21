@@ -1,7 +1,7 @@
 import { login, getUserData } from "../../scripts/api.js";
 import { verifyInputs, verification } from "../../scripts/formVerifications.js";
 
-const login = () => {
+const loginCall = () => {
 	const loginForm = document.querySelector("form")
 	const loginFormElements = [...loginForm.elements]
 	const loginBttn = loginForm.querySelector('.bttn-blue')
@@ -20,7 +20,7 @@ const login = () => {
 	})
 
 }
-login()
+loginCall()
 
 function registerLink() {
 	const goToRegisterBttn = document.getElementById('go-to-register')
